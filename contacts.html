@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts | SLU Kenya Semester Program</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Karibuni Kenya</h1>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ksp/compound.html">KSP</a></li>
+        <li><a href="gilman/index.html">Gilman</a></li>
+        <li><a href="contacts.html" class="active">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero contacts-hero">
+    <div class="hero-overlay">
+      <h2>Contact Information</h2>
+      <p style="font-size: 20px;">Reach out to the team in Kenya or at St. Lawrence University. These are your best forms of contact for anything SLU KSP related and some are just great to talk to.</p>
+    </div>
+  </section>
+
+  <!-- SECTION: KSP NAIROBI STAFF -->
+  <section class="contact-section">
+    <h2>SLU KSP Staff</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <img src="images/home/michael.jpg" alt="KSP Director" class="responsive">
+        <h3>Michael Wairungu</h3>
+        <p><strong>Academic Instruction for SLU Kenya</strong></p>
+        <p><a href="mailto:mwairungu@stlawu.edu">Michael's Contact</a></p>
+        <p>Oversees academics, rural home-stay field component, and IDS across Kenya. He is also a great person to talk to for any academic or personal advice.</p>
+      </div>
+
+      <div class="contact-card">
+        <img src="images/home/sinnary.jpg" alt="Program Assistant" class="responsive">
+        <h3>Abdelwahab Sinnary</h3>
+        <p><strong>Academic Director</strong></p>
+        <p><a href="mailto:asinnary@stlawu.edu">Sinnary's Contact</a></p>
+        <p>Oversees Nakuru/ Naivasha & Amboseli/Mombasa field components as well as teaches Biodiversity course. Has an amazing catch phrase and a contagious laugh.</p>
+      </div>
+
+      <div class="contact-card">
+        <img src="images/home/cailtin.jpeg" alt="Chef Isaiah" class="responsive">
+        <h3>Caitlin Hatz</h3>
+        <p><strong>Director of Off-Campus Programs</strong></p>
+        <p><a href="mailto:isaiah@kspkenya.org">Caitlin's Contact</a></p>
+        <p>Main form of contact and best form of intel for anything studying abroad. Former SLU KSP alumni who is always avaiable to sit down and talk about anything study abroad and Gilman related.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: ST. LAWRENCE CONTACTS -->
+  <section class="contact-section">
+    <h2>SLU KSP Staff</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <img src="images/home/lina.jpg" alt="SLU Office Director" class="responsive">
+        <h3>Lina Karingi</h3>
+        <p><strong>Director of Finance & Administration</strong></p>
+        <p><a href="mailto:lkaringi@stlawu.edu">Lina's Contact</a></p>
+        <p>Oversees all SLU KSP finances and adminstrative operations. She makes amazing chai and has amazinh hospitality.</p>
+      </div>
+
+      <div class="contact-card">
+        <img src="images/home/njau.png" alt="Advisor" class="responsive">
+        <h3>Njau Kibochi</h3>
+        <p><strong>Program Driver</strong></p>
+        <p><a href="tel:+254 722 770046">Njau's Contact</a></p>
+        <p>Oversees all student transportation in Kenya. The best driver and mechanic in all of Kenya. Is also known to have the best smile.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Henry Julca | SLU Kenya Semester Program</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('.nav');
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

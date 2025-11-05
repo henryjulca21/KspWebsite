@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gilman FAQ | SLU Kenya Semester Program</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* TEMPORARY styles for accordion (will merge into final CSS later) */
+    .faq-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .faq-item {
+      background: var(--beige, #f8f3e8);
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border-left: 5px solid var(--green, #1a7a34);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      background: var(--white, #fff);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question:hover {
+      background: rgba(0,0,0,0.05);
+    }
+    .faq-answer {
+      padding: 1rem;
+      display: none;
+      background: #fafafa;
+      line-height: 1.6;
+    }
+    .faq-answer.show {
+      display: block;
+    }
+    .faq-question span {
+      font-weight: bold;
+      color: var(--red, #b31217);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Karibuni Kenya</h1>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../ksp/compound.html">KSP</a></li>
+        <li><a href="index.html" class="active">Gilman</a></li>
+        <li><a href="../contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero faq-hero">
+    <div class="hero-overlay">
+      <h2>Frequently Asked Questions</h2>
+      <p>
+        Everything you need to know about the Gilman Scholarship and how it supports your Kenya Semester Program journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>+</span> Who can apply for the Gilman Scholarship?
+      </div>
+      <div class="faq-answer">
+        Any U.S. undergraduate student receiving a Federal Pell Grant is eligible to apply, provided they are in good standing at an accredited institution and participating in a credit-bearing study abroad or internship program.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>+</span> How much funding can I receive?
+      </div>
+      <div class="faq-answer">
+        Awards can be up to $5,000, with an additional $3,000 available for students studying a Critical Need Language such as Swahili. 
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>+</span> When are the deadlines?
+      </div>
+      <div class="faq-answer">
+        Typically, there are two cycles each year — one in March and one in October. Check the <a href="https://www.gilmanscholarship.org" target="_blank">official Gilman site</a> for exact dates.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>+</span> Do I need to speak a foreign language?
+      </div>
+      <div class="faq-answer">
+        No but learning a local language like Swahili while abroad can enrich your experience and strengthen your application.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>+</span> Can I apply earlier than my study abroad semester?
+      </div>
+      <div class="faq-answer">
+        Absolutely! You can apply and receive your Scholarship funds months or around the same time as your initial stuyd abroad start date.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>+</span> Who can I contact for help with my application?
+      </div>
+      <div class="faq-answer">
+        You can contact past KSP Gilman Scholars or the SLU Office of International and Intercultural Studies. Visit the <a href="scholars.html">Scholars page</a> for more.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Henry Julca | SLU Kenya Semester Program</p>
+  </footer>
+
+  <!-- JS for Navbar + Accordion -->
+  <script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('.nav');
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
+
+    // Accordion logic
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        const icon = q.querySelector('span');
+        answer.classList.toggle('show');
+        icon.textContent = answer.classList.contains('show') ? '-' : '+';
+      });
+    });
+  </script>
+</body>
+</html>

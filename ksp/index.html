@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KSP | SLU Kenya Semester Program</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Karibuni Kenya</h1>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="compound.html" class="active">KSP</a></li>
+        <li><a href="../gilman/index.html">Gilman</a></li>
+        <li><a href="../contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero ksp-hero">
+    <div class="hero-overlay">
+      <h2>The Kenya Semester Program</h2>
+      <p>Immersion. Learning. Growth.  
+        Discover how SLU students engage with Kenya through academics, fieldwork, and cultural exchange.
+      </p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="ksp-overview">
+    <h2>Explore the Program</h2>
+    <p>
+      The Kenya Semester Program (KSP) combines classroom learning with hands-on experiences across Kenya. 
+      From biodiversity studies in the Nakuru to community life in Nairobi, this program is a journey that 
+      blends academics, travel, and cultural understanding.
+    </p>
+
+    <div class="ksp-grid">
+      <a href="compound.html" class="card">
+        <h3>Compound Life</h3>
+        <p>Get a glimpse into daily life at the KSP compound in Nairobi.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE SECTION -->
+  <section class="quote">
+    <blockquote>
+      <p>“Traveling, it leaves you speechless, then turns you into a storyteller.”</p>
+      <cite>— Ibn Battuta</cite>
+    </blockquote>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Henry Julca | SLU Kenya Semester Program</p>
+  </footer>
+
+  <!-- JS for Mobile Menu -->
+  <script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('.nav');
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

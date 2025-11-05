@@ -1,0 +1,691 @@
+/* ============================================================
+   SLU Kenya Semester Program | Global Stylesheet
+   Author: Henry Julca
+   Theme: Black • Red • Green • White • Beige
+   ============================================================ */
+
+/* ---------- COLOR PALETTE ---------- */
+:root {
+  --black: #000000;
+  --red: #b31217;
+  --green: #1a7a34;
+  --white: #ffffff;
+  --beige: #f8f3e8;
+  --gray: #444444;
+}
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--beige);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+/* ---------- HEADER & NAVIGATION ---------- */
+header {
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__list li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav__list li a:hover,
+.nav__list li a.active {
+  color: var(--green);
+}
+
+/* ---------- HAMBURGER MENU ---------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background: var(--white);
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  position: relative;
+  background: url('../images/hero-default.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 4rem 2rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* ---------- GRID & CARD SYSTEM ---------- */
+.ksp-grid,
+.course-grid,
+.components-grid,
+.gallery-grid,
+.contact-grid,
+.gilman-grid,
+.scholars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card,
+.course-card,
+.component-card,
+.gilman-card,
+.scholar-card,
+.contact-card {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes button to bottom */
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding-bottom: 1rem; /* space for button */
+  position: relative;
+}
+
+.card:hover,
+.course-card:hover,
+.component-card:hover,
+.gilman-card:hover,
+.scholar-card:hover,
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card img,
+.course-card img,
+.component-card img,
+.gilman-card img,
+.scholar-card img,
+.contact-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3,
+.course-card h3,
+.component-card h3,
+.gilman-card h3,
+.scholar-card h3,
+.contact-card h3 {
+  color: var(--black);
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.card p,
+.course-card p,
+.component-card p,
+.gilman-card p,
+.scholar-card p,
+.contact-card p {
+  color: var(--gray);
+  padding: 0 1rem 1rem;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn,
+.btn-card {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover,
+.btn-card:hover {
+  background: var(--red);
+}
+
+/* ---------- GALLERY ---------- */
+.gallery-grid img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- QUOTE SECTION ---------- */
+.quote {
+  background: var(--green);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.quote blockquote {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- SPECIAL SECTIONS ---------- */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container iframe {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* ---------- CONTACT PAGES ---------- */
+.contact-section ul,
+.emergency-contact ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.emergency-contact ul li {
+  margin: 0.5rem 0;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 900px) {
+  header {
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    background: var(--black);
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+
+  .nav.open {
+    display: block;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
+  .nav__list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .gallery-grid img {
+    height: 180px;
+  }
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+img.responsive {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------- ACADEMICS PAGE LAYOUT ---------- */
+.course-feature {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.course-feature .course-card {
+  flex: 1 1 350px;
+  max-width: 400px;
+}
+
+/* Make the pyramid spacing consistent */
+.course-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.course-grid .course-card {
+  max-width: 320px;
+}
+
+/* On smaller screens */
+@media (max-width: 768px) {
+  .course-feature {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.course-details {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-details h2,
+.course-details h3 {
+  text-align: left;
+  color: var(--black);
+  margin-top: 1.5rem;
+}
+
+.course-details ul {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+
+/* ---------- GILMAN GRID ---------- */
+.gilman-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem; /* tighter gap between cards */
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+/* ---------- GILMAN CARDS ---------- */
+/* ---------- GILMAN SCHOLAR CARDS ---------- */
+.gilman-card {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.gilman-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.gilman-card h3 {
+  font-size: 1.1rem;
+  color: var(--black);
+  margin-bottom: 0.25rem;
+}
+
+.gilman-card .scholar-role {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--green);
+  margin-bottom: 0.6rem;
+}
+
+.gilman-card .scholar-bio {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+
+.gilman-card p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--gray);
+  margin-bottom: 0.8rem;
+}
+
+.gilman-card .btn-card {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+/* ---------- GILMAN HERO SECTION (TIGHTER VERSION) ---------- */
+.gilman-hero {
+  position: relative;
+  background: url('../../images/gilman/hero-bg.jpg') center/cover no-repeat;
+  height: auto;
+  padding: 3rem 1rem; /* smaller top/bottom space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 2rem; /* less gap before next section */
+}
+
+.gilman-hero .hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 1.2rem 1.5rem; /* reduced padding inside */
+  border-radius: 8px;
+  max-width: 700px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gilman-hero h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.gilman-hero p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* ---------- APPLY PAGE ---------- */
+.apply-info {
+  background: var(--beige);
+  padding: 3rem 1.5rem;
+}
+
+.apply-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2.5rem;
+}
+
+.apply-container h2 {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.apply-container ul {
+  margin-bottom: 2rem;
+  padding-left: 1.2rem;
+}
+
+.apply-container li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--gray);
+  list-style: disc;
+}
+
+.apply-button {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.apply-button .btn {
+  background: var(--green);
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.apply-button .btn:hover {
+  background: var(--red);
+}
+
+/* Tighten hero overlay for this page */
+.gilman-hero {
+  height: auto;
+  padding: 3rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.gilman-hero .hero-overlay {
+  padding: 1.5rem;
+  max-width: 750px;
+}
+
+/* ---------- FAQ SECTION ---------- */
+.faq-section {
+  background: var(--beige);
+  padding: 2rem 1.5rem;
+  margin-top: 0; /* remove top gap if there was any */
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.video-section {
+  text-align: center;
+  background: var(--beige);
+  padding: 2rem 1rem;
+}
+
+.video-section h2 {
+  color: var(--black);
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.responsive-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- GALLERY GRID ---------- */
+.compound-gallery {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--beige);
+}
+
+.compound-gallery h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--black);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.clickable-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ---------- EXPANDABLE GALLERY ---------- */
+/* ---------- COMPOUND GALLERY ---------- */
+.compound-gallery {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--beige);
+}
+
+.compound-gallery h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--black);
+}
+
+/* ---------- GALLERY GRID ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.gallery-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- EXPANDED VIEWER ---------- */
+.viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  cursor: pointer; /* click anywhere to close */
+}
+
+.viewer-overlay.show {
+  display: flex;
+}
+
+.viewer-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+

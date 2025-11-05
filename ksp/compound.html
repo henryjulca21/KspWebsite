@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Life | SLU Kenya Semester Program</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Karibuni Kenya</h1>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="compound.html" class="active">KSP</a></li>
+        <li><a href="../gilman/index.html">Gilman</a></li>
+        <li><a href="../contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- INTRO SECTION -->
+  <section class="hero compound-hero">
+    <div class="hero-overlay">
+      <h2>Welcome Home</h2>
+        <p>
+          Life as a student in KSP was unforgettable experience. Nothing was a ever a dull experience living in Kenya. Here are a collection of photos encapsulating life as 
+          a student at the SLU Kenya Semester Program compound in Nairobi as well as some of the components and activities that made the program so special. I dedicated each week to a collection of photos and numbered them. Feel free to click on the images and look into each of my weeks as SLU KSP student.
+        </p>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <section class="gallery">
+    <h2>KSP Compound Gallery</h2>
+
+    <div class="image-grid">
+      <img src="../images/home/1.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/2.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/3.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/4.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/5-1.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/5-2.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/6.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/7.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/8.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/9.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/10.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/11.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/12.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/13.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/14.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/15.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/16.PNG" alt="KSP Compound 1" class="gallery-image">
+      <img src="../images/home/17.PNG" alt="KSP Compound 1" class="gallery-image">
+    </div>
+
+    <div class="viewer-overlay" id="viewerOverlay">
+      <img id="viewerImage" alt="">
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <div style="display: flex; justify-content: center; padding: 1rem;">
+    <iframe
+      src="https://drive.google.com/file/d/10RrALBGjiLYyOR-PT-gu5zf2xnVWTSpB/preview"
+      width="800"
+      height="450"
+      allow="autoplay"
+      style="max-width: 100%; border: none; border-radius: 10px;">
+    </iframe>
+  </div>
+
+
+  <!-- PERSONAL EXPERIENCE -->
+  <section class="experience">
+    <h2>My Experience</h2>
+    <p>
+      The compound quickly became my second home. I will never forget the memories that were made on these grounds. 
+      Greeting all the staff workers that live on the premises, the many games of soccer out in the field. 
+      All of the birthday parties, late night study sessions, and the wild monkey visits that kept us on our toes doesn't scratch the surface of memories that were created in the compound. 
+      The compound is truly a special place that fosters community and lifelong friendships.
+    </p>
+  </section>
+
+
+  <!-- QUOTE SECTION -->
+  <section class="quote">
+    <blockquote>
+      <p>“Home is not a place... it’s the people.”</p>
+      <cite>— SLU Kenya Semester Program Student</cite>
+    </blockquote>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Henry Julca | SLU Kenya Semester Program</p>
+  </footer>
+
+  <!-- JS for Hamburger -->
+  <script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('.nav');
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
+
+    
+    const overlay = document.getElementById('viewerOverlay');
+    const viewerImg = document.getElementById('viewerImage');
+    const images = document.querySelectorAll('.gallery-image');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        overlay.classList.add('show');
+        viewerImg.src = img.src.replace('_small', ''); // assumes full image has no "_small"
+      });
+    });
+
+    overlay.addEventListener('click', () => {
+      overlay.classList.remove('show');
+    });
+
+  </script>
+</body>
+</html>

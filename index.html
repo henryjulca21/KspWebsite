@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karibuni Kenya | SLU Kenya Semester Program</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <h1>Karibuni Kenya</h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="ksp/compound.html">KSP</a></li>
+        <li><a href="gilman/index.html">Gilman</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h2>Karibuni Kenya 🇰🇪</h2>
+      <p>
+        Welcome to my journey through the <strong>St. Lawrence University Kenya Semester Program.</strong>      
+        <br> A transformative academic and cultural experience in the heart of East Africa.
+      </p>
+      <a href="ksp/compound.html" class="btn">Explore the Program</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>About the Program</h2>
+    <p>
+      The <strong>Kenya Semester Program (KSP)</strong> is a study abroad experience that blends academia
+      with cultural immersion through the various components. SLU's Kenya semester program transforms traditional laearning into hands-on experience. 
+      This program challenges students to see the world differently, think critically, and engage deeply with new perspectives.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS SECTION -->
+  <section class="highlights">
+    <h2>Program Highlights</h2>
+    <div class="highlight-grid">
+      <div class="card">
+        <img src="images/home/Flag_of_Kenya.svg" alt="Compound Life" class="responsive">
+        <h3>SLU KSP Life</h3>
+        <p>Come experience and see what it was like in my POV being a student in the SLU Kenya semester program.</p>
+        <a href="ksp/compound.html" class="btn-card">Explore</a>
+      </div>
+
+      <div class="card">
+        <img src="images/home/gilmanLogo.jpg" alt="Gilman Scholars" class="responsive">
+        <h3>Meet the Gilman Scholars</h3>
+        <p>Explore your Learn from SLU alumni who received the <strong>Gilman Scholarship</strong> to study in Kenya. 
+          If you need a reason to apply, talk to the people who've lived it. They'll tell you why it's worth it. </p>
+        <a href="gilman/index.html" class="btn-card">Meet Scholars</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE SECTION -->
+  <section class="quote">
+    <blockquote>
+      <p>“He who learns, teaches.”</p>
+      <cite>— African Proverb</cite>
+    </blockquote>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Henry Julca | St. Lawrence University Kenya Semester Program</p>
+  </footer>
+
+  <script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('.nav');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
